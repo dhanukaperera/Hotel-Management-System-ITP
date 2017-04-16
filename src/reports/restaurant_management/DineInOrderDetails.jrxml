@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c47a21d1-ddba-401e-b244-a4f767e5598f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     restaurant_bill.`Bill ID` AS restaurant_bill_Bill_ID,
+     restaurant_bill.`Name` AS restaurant_bill_Name,
+     restaurant_bill.`Qty` AS restaurant_bill_Qty,
+     restaurant_bill.`Rate` AS restaurant_bill_Rate,
+     restaurant_bill.`Value` AS restaurant_bill_Value,
+     restaurant_bill.`Table NO` AS restaurant_bill_Table_NO,
+     restaurant_bill.`Service Charges` AS restaurant_bill_Service_Charges,
+     restaurant_bill.`Total` AS restaurant_bill_Total,
+     restaurant_bill.`Discount Reason` AS restaurant_bill_Discount_Reason,
+     restaurant_bill.`Discount` AS restaurant_bill_Discount,
+     restaurant_bill.`Paid Amount` AS restaurant_bill_Paid_Amount,
+     restaurant_bill.`Balance` AS restaurant_bill_Balance
+FROM
+     `restaurant_bill` restaurant_bill]]>
+	</queryString>
+	<field name="restaurant_bill_Bill_ID" class="java.lang.String"/>
+	<field name="restaurant_bill_Name" class="java.lang.String"/>
+	<field name="restaurant_bill_Qty" class="java.lang.Integer"/>
+	<field name="restaurant_bill_Rate" class="java.lang.Float"/>
+	<field name="restaurant_bill_Value" class="java.lang.Integer"/>
+	<field name="restaurant_bill_Table_NO" class="java.lang.Integer"/>
+	<field name="restaurant_bill_Service_Charges" class="java.lang.Float"/>
+	<field name="restaurant_bill_Total" class="java.lang.Float"/>
+	<field name="restaurant_bill_Discount_Reason" class="java.lang.String"/>
+	<field name="restaurant_bill_Discount" class="java.lang.Float"/>
+	<field name="restaurant_bill_Paid_Amount" class="java.lang.Float"/>
+	<field name="restaurant_bill_Balance" class="java.lang.Float"/>
+	<group name="restaurant_bill_Bill_ID">
+		<groupExpression><![CDATA[$F{restaurant_bill_Bill_ID}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement style="SubTitle" x="47" y="13" width="506" height="24" forecolor="#CC0000" uuid="c6c4bf8d-aafe-4b29-987e-dcf0a3ae1b08"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{restaurant_bill_Bill_ID}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="150" y="10" width="263" height="33" forecolor="#FF9966" uuid="aa38e1f9-248b-4cb0-a6ef-0478d077545b"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Dine In Order Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="3710d0cc-d067-4122-b995-d3989b88de87"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="50" height="15" uuid="d5768719-ad03-497d-aa65-2bc24e1a6fad"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="50" y="19" width="50" height="15" uuid="63f6c101-2b8a-44eb-9f15-b77f99f8486d"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="100" y="19" width="50" height="15" uuid="52c26779-bf59-4c8e-a62d-b921907d6b91"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="150" y="19" width="50" height="15" uuid="44b285d6-4598-4b79-a6a9-3536ed475904"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="250" y="19" width="50" height="15" uuid="c5f31ed4-6a18-4ed7-b33e-bca032eb6715"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Service Charges]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="300" y="19" width="50" height="15" uuid="330862f0-6546-4834-8e76-e8403ae942e7"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="350" y="19" width="50" height="15" uuid="74cc484d-dcb7-4fa3-a662-b548ffbc6680"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Discount Reason]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="400" y="19" width="50" height="15" uuid="72b4dd07-307e-4e09-ae86-17a946674a9b"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Reason]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="450" y="19" width="50" height="15" uuid="a15f5b8f-dd90-43dd-b42d-5dd42d0e49cf"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Paid Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="500" y="19" width="50" height="15" uuid="ff49b4e8-37b2-4fd5-807c-a9875dc98384"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="19" width="37" height="15" uuid="8f1961fb-c4c3-497d-a68a-11fd6af7be72"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Table No]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="2121425e-d1f9-40db-aa94-4ccf02536bdc"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="0" y="0" width="50" height="15" uuid="25692735-7646-4c48-a667-f240d5da502d"/>
+				<textFieldExpression><![CDATA[$F{restaurant_bill_Name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="50" y="0" width="50" height="15" uuid="3594c728-eceb-4b4e-8ed3-e2a6b93d0e56"/>
+				<textFieldExpression><![CDATA[$F{restaurant_bill_Qty}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="100" y="0" width="50" height="15" uuid="3f84b573-951c-43b0-b49b-96455eb86782"/>
+				<textFieldExpression><![CDATA[$F{restaurant_bill_Rate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="150" y="0" width="50" height="15" uuid="fea1866c-af85-4e12-becb-839bf9cfd5df"/>
+				<textFieldExpression><![CDATA[$F{restaurant_bill_Value}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="200" y="0" width="50" height="15" uuid="40fac0fe-243f-4b6e-8007-3b43fce6f905"/>
+				<textFieldExpression><![CDATA[$F{restaurant_bill_Table_NO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="250" y="0" width="50" height="15" uuid="1487734c-90a7-44ca-bcb0-60532297efd1"/>
+				<textFieldExpression><![CDATA[$F{restaurant_bill_Service_Charges}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="300" y="0" width="50" height="15" uuid="03db3ca1-16ec-4a7d-b9ae-2e0c430289be"/>
+				<textFieldExpression><![CDATA[$F{restaurant_bill_Total}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="350" y="0" width="50" height="15" uuid="ae86f6a7-0efe-44d4-8919-a34492889632"/>
+				<textFieldExpression><![CDATA[$F{restaurant_bill_Discount_Reason}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="400" y="0" width="50" height="15" uuid="290df568-a9db-45ae-87b2-8de2e111a7fb"/>
+				<textFieldExpression><![CDATA[$F{restaurant_bill_Discount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="450" y="0" width="50" height="15" uuid="17ad73d4-235d-4b4d-95ce-adf37177db73"/>
+				<textFieldExpression><![CDATA[$F{restaurant_bill_Paid_Amount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="500" y="0" width="50" height="15" uuid="58626cbf-ff2c-44b6-857d-1f5b8b39fc51"/>
+				<textFieldExpression><![CDATA[$F{restaurant_bill_Balance}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="5b7a9dc9-0393-4d78-90da-7a2aadce0657"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="e60fb9b4-09e8-4887-b4da-3d68f2ad536e"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="18107399-180e-4dec-a184-e2e114502cb4"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="53b1cb75-ef22-4877-8192-ed4b7ab164b7"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="91a5d65d-70f5-408d-b116-6d346953ee9b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     takeoutorders_bill_info.`Bill ID` AS takeoutorders_bill_info_Bill_ID,
+     takeoutorders_bill_info.`Count` AS takeoutorders_bill_info_Count,
+     takeoutorders_bill_info.`FOB ID` AS takeoutorders_bill_info_FOB_ID,
+     takeoutorders_bill_info.`Type` AS takeoutorders_bill_info_Type,
+     takeoutorders_bill_info.`Name` AS takeoutorders_bill_info_Name,
+     takeoutorders_bill_info.`QTY` AS takeoutorders_bill_info_QTY,
+     takeoutorders_bill_info.`Rate` AS takeoutorders_bill_info_Rate,
+     takeoutorders_bill_info.`Value` AS takeoutorders_bill_info_Value,
+     takeoutorders_bill_info.`Total` AS takeoutorders_bill_info_Total,
+     takeoutorders_bill_info.`Discount Reason` AS takeoutorders_bill_info_Discount_Reason,
+     takeoutorders_bill_info.`Discount` AS takeoutorders_bill_info_Discount,
+     takeoutorders_bill_info.`Paid Amount` AS takeoutorders_bill_info_Paid_Amount,
+     takeoutorders_bill_info.`Balance` AS takeoutorders_bill_info_Balance
+FROM
+     `takeoutorders_bill_info` takeoutorders_bill_info]]>
+	</queryString>
+	<field name="takeoutorders_bill_info_Bill_ID" class="java.lang.String"/>
+	<field name="takeoutorders_bill_info_Count" class="java.lang.Integer"/>
+	<field name="takeoutorders_bill_info_FOB_ID" class="java.lang.String"/>
+	<field name="takeoutorders_bill_info_Type" class="java.lang.String"/>
+	<field name="takeoutorders_bill_info_Name" class="java.lang.String"/>
+	<field name="takeoutorders_bill_info_QTY" class="java.lang.Integer"/>
+	<field name="takeoutorders_bill_info_Rate" class="java.lang.Float"/>
+	<field name="takeoutorders_bill_info_Value" class="java.lang.Float"/>
+	<field name="takeoutorders_bill_info_Total" class="java.lang.Float"/>
+	<field name="takeoutorders_bill_info_Discount_Reason" class="java.lang.String"/>
+	<field name="takeoutorders_bill_info_Discount" class="java.lang.Float"/>
+	<field name="takeoutorders_bill_info_Paid_Amount" class="java.lang.Float"/>
+	<field name="takeoutorders_bill_info_Balance" class="java.lang.Float"/>
+	<group name="takeoutorders_bill_info_Bill_ID">
+		<groupExpression><![CDATA[$F{takeoutorders_bill_info_Bill_ID}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement style="SubTitle" x="47" y="13" width="506" height="24" forecolor="#CC0000" uuid="6f4dbf51-54b0-4c64-aa75-cdc71ca415fd"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{takeoutorders_bill_info_Bill_ID}]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="13" width="36" height="24" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="485630f4-3ea3-43a8-80f1-e87bf59e570b"/>
+				</rectangle>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="151" y="12" width="263" height="33" uuid="8f880a2f-2b47-440f-b0df-9888fe7842f8"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[PAVANA HOTEL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="b4caaf62-8520-48b5-a0c3-21a2006ee708"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="46" height="15" uuid="fea858e6-4108-4e12-9242-2ceb5056bac9"/>
+				<text><![CDATA[takeoutorders_bill_info_Count]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="46" y="19" width="46" height="15" uuid="8addf498-29d0-42d4-8bfc-e521b5bd44ac"/>
+				<text><![CDATA[takeoutorders_bill_info_FOB_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="92" y="19" width="46" height="15" uuid="4fa25ffe-1a78-4e09-a3b8-fe83bdc3a7d5"/>
+				<text><![CDATA[takeoutorders_bill_info_Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="19" width="46" height="15" uuid="e1aad36b-0623-4775-906b-ac6a8fbd6ffa"/>
+				<text><![CDATA[takeoutorders_bill_info_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="184" y="19" width="46" height="15" uuid="5a592ecb-0214-4e53-b453-7e701824aa86"/>
+				<text><![CDATA[takeoutorders_bill_info_QTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="230" y="19" width="46" height="15" uuid="1b37783b-ddab-421c-b786-d30b0e678500"/>
+				<text><![CDATA[takeoutorders_bill_info_Rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="46" height="15" uuid="3c735ed6-74b3-4630-b3b4-226a8aae5821"/>
+				<text><![CDATA[takeoutorders_bill_info_Value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="322" y="19" width="46" height="15" uuid="9c27ca36-8669-4058-a8fe-734869929162"/>
+				<text><![CDATA[takeoutorders_bill_info_Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="368" y="19" width="46" height="15" uuid="ba58edd6-c518-41e6-a590-7b205a861fc7"/>
+				<text><![CDATA[takeoutorders_bill_info_Discount_Reason]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="19" width="46" height="15" uuid="06864946-a056-47f0-8585-475a8ea2182c"/>
+				<text><![CDATA[takeoutorders_bill_info_Discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="460" y="19" width="46" height="15" uuid="efec9161-6467-4687-828b-cf00609da864"/>
+				<text><![CDATA[takeoutorders_bill_info_Paid_Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="506" y="19" width="46" height="15" uuid="37e31906-0490-4a78-9cd2-b143fbea3777"/>
+				<text><![CDATA[takeoutorders_bill_info_Balance]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="1cbae522-4136-45f9-9917-dfd87cf4132f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="0" y="0" width="46" height="15" uuid="d73ae480-3a2a-4b82-b47f-8694283560ae"/>
+				<textFieldExpression><![CDATA[$F{takeoutorders_bill_info_Count}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="46" y="0" width="46" height="15" uuid="5d92a5d7-4031-48b8-bd0b-eebd36aea7c4"/>
+				<textFieldExpression><![CDATA[$F{takeoutorders_bill_info_FOB_ID}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="92" y="0" width="46" height="15" uuid="ddf3ce68-e247-42dd-8367-7b8b45fee746"/>
+				<textFieldExpression><![CDATA[$F{takeoutorders_bill_info_Type}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="138" y="0" width="46" height="15" uuid="63d0df7b-89b8-4479-bc39-7b7ada1f72e9"/>
+				<textFieldExpression><![CDATA[$F{takeoutorders_bill_info_Name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="184" y="0" width="46" height="15" uuid="4a77d5b6-6fea-43db-827e-7e989f0f662c"/>
+				<textFieldExpression><![CDATA[$F{takeoutorders_bill_info_QTY}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="230" y="0" width="46" height="15" uuid="6546ece0-3f7c-4dea-a8dd-660dc43107a7"/>
+				<textFieldExpression><![CDATA[$F{takeoutorders_bill_info_Rate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="276" y="0" width="46" height="15" uuid="96fabc47-7d76-485c-9df3-28786522b765"/>
+				<textFieldExpression><![CDATA[$F{takeoutorders_bill_info_Value}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="322" y="0" width="46" height="15" uuid="85f13645-ef7a-41af-b575-7d75139cda72"/>
+				<textFieldExpression><![CDATA[$F{takeoutorders_bill_info_Total}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="368" y="0" width="46" height="15" uuid="476677fb-8a97-4a62-89ab-d504d0071f74"/>
+				<textFieldExpression><![CDATA[$F{takeoutorders_bill_info_Discount_Reason}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="414" y="0" width="46" height="15" uuid="dd1700df-8cd1-49c1-acab-5e74a23b9c6d"/>
+				<textFieldExpression><![CDATA[$F{takeoutorders_bill_info_Discount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="460" y="0" width="46" height="15" uuid="13288bf7-f783-44ed-a63e-1bc16b5d4002"/>
+				<textFieldExpression><![CDATA[$F{takeoutorders_bill_info_Paid_Amount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="Detail" x="506" y="0" width="46" height="15" uuid="63d25983-3bf0-4333-b0a0-5cd8f3148b18"/>
+				<textFieldExpression><![CDATA[$F{takeoutorders_bill_info_Balance}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="d8dcbd2d-8b22-4150-a315-71b4f1fb2841"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="6ce2ef34-707c-47df-8e27-e0501ca78295"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="f235963c-d432-447e-b5a4-f7b11a3b497f"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="2795d5d6-dd24-49c9-b864-a5bf90ffe1c7"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="ba507d9c-224e-45d8-ab0f-9d0a03c4966c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     salary_calculation.`Salary From Date` AS salary_calculation_Salary_From_Date,
+     salary_calculation.`Salary To Date` AS salary_calculation_Salary_To_Date,
+     salary_calculation.`Employee ID` AS salary_calculation_Employee_ID,
+     salary_calculation.`Role` AS salary_calculation_Role,
+     salary_calculation.`Attendance` AS salary_calculation_Attendance,
+     salary_calculation.`Leaves` AS salary_calculation_Leaves,
+     salary_calculation.`BasicSalary` AS salary_calculation_BasicSalary,
+     salary_calculation.`WorkedHours` AS salary_calculation_WorkedHours,
+     salary_calculation.`EPF` AS salary_calculation_EPF,
+     salary_calculation.`EPF12` AS salary_calculation_EPF12,
+     salary_calculation.`ETF` AS salary_calculation_ETF,
+     salary_calculation.`Bonus Type` AS salary_calculation_Bonus_Type,
+     salary_calculation.`Bonus` AS salary_calculation_Bonus,
+     salary_calculation.`TotalSalary` AS salary_calculation_TotalSalary
+FROM
+     `salary_calculation` salary_calculation]]>
+	</queryString>
+	<field name="salary_calculation_Salary_From_Date" class="java.lang.String"/>
+	<field name="salary_calculation_Salary_To_Date" class="java.lang.String"/>
+	<field name="salary_calculation_Employee_ID" class="java.lang.String"/>
+	<field name="salary_calculation_Role" class="java.lang.String"/>
+	<field name="salary_calculation_Attendance" class="java.lang.Integer"/>
+	<field name="salary_calculation_Leaves" class="java.lang.Integer"/>
+	<field name="salary_calculation_BasicSalary" class="java.lang.Double"/>
+	<field name="salary_calculation_WorkedHours" class="java.lang.Integer"/>
+	<field name="salary_calculation_EPF" class="java.lang.Double"/>
+	<field name="salary_calculation_EPF12" class="java.lang.Double"/>
+	<field name="salary_calculation_ETF" class="java.lang.Double"/>
+	<field name="salary_calculation_Bonus_Type" class="java.lang.String"/>
+	<field name="salary_calculation_Bonus" class="java.lang.Double"/>
+	<field name="salary_calculation_TotalSalary" class="java.lang.Double"/>
+	<group name="salary_calculation_Employee_ID">
+		<groupExpression><![CDATA[$F{salary_calculation_Employee_ID}]]></groupExpression>
+		<groupHeader>
+			<band height="40">
+				<textField>
+					<reportElement style="SubTitle" x="143" y="13" width="657" height="24" forecolor="#000000" uuid="c7571da7-813f-4c5b-89f7-ef7f89d7988e"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{salary_calculation_Employee_ID}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="30"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="802" height="67" uuid="0a16ec4f-f7fa-4943-8b5f-e1fee57a0076"/>
+				<textElement verticalAlignment="Middle">
+					<font size="36" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Salary Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="232" y="67" width="568" height="37" uuid="48ca1667-9ca6-468f-bcc5-f5dec039a3db"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Pavana Hotel]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="20" backcolor="#666666" uuid="5be0031d-8549-4f9e-b006-3cca30dcff0c"/>
+				<staticText>
+					<reportElement style="Column header" x="42" y="0" width="91" height="15" uuid="e52fce16-43a5-4871-b72b-8410db618e65"/>
+					<text><![CDATA[Salary_To_Date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="133" y="0" width="29" height="15" uuid="1ea37bf8-2316-4e3e-ad6f-7ebcede5687c"/>
+					<text><![CDATA[Role]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="162" y="0" width="54" height="15" uuid="92f7f5e2-90a2-4582-88a6-fb6231bad03d"/>
+					<text><![CDATA[Attendance]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="216" y="0" width="54" height="15" uuid="64239a46-58a9-4542-81b2-127c32d29d44"/>
+					<text><![CDATA[Leaves]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="270" y="0" width="65" height="15" uuid="cee05775-c6cb-44d7-9830-283c1fde4477"/>
+					<text><![CDATA[BasicSalary]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="335" y="0" width="76" height="15" uuid="b41d7b7c-a2ac-4398-952a-bc6cd7b36197"/>
+					<text><![CDATA[WorkedHours]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="411" y="0" width="42" height="15" uuid="bd713fe7-cd2e-4c47-8168-291ce2d06dc6"/>
+					<text><![CDATA[EPF]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="453" y="0" width="54" height="15" uuid="79224105-50ce-4495-bd15-9e6e7cf5ebba"/>
+					<text><![CDATA[EPF12]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="507" y="0" width="54" height="15" uuid="850a0c55-a34c-4b90-ad53-a985bf2167f6"/>
+					<text><![CDATA[ETF]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="561" y="0" width="76" height="15" uuid="01ba2ce5-0327-454a-9af7-a96a5704ad7a"/>
+					<text><![CDATA[Bonus_Type]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="637" y="0" width="54" height="15" uuid="922d8a24-557a-40e9-ba6e-494bf9394e6e"/>
+					<text><![CDATA[Bonus]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="691" y="0" width="108" height="15" uuid="5fb9b342-1a05-41ae-ba55-5bd8b8bd01cf"/>
+					<text><![CDATA[TotalSalary]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="0" width="42" height="15" uuid="50e81a8f-194a-4fb2-bba0-250bd6c9f3d2"/>
+					<text><![CDATA[Salary_From_Date]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="2" width="802" height="15" uuid="bcd29727-0cdb-40d8-aa32-b85eb46c9064"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="54" height="15" uuid="fde921ac-cf10-4b5c-99ba-8d319d59bc53"/>
+					<textFieldExpression><![CDATA[$F{salary_calculation_Salary_From_Date}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="54" y="0" width="54" height="15" uuid="20746c6e-5650-4459-8732-5635c0757f03"/>
+					<textFieldExpression><![CDATA[$F{salary_calculation_Salary_To_Date}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="108" y="0" width="54" height="15" uuid="f5132b83-fc12-4c2e-81da-fd62041de576"/>
+					<textFieldExpression><![CDATA[$F{salary_calculation_Role}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="162" y="0" width="54" height="15" uuid="6a65ae60-144b-4f2a-8758-12de8b6d52fd"/>
+					<textFieldExpression><![CDATA[$F{salary_calculation_Attendance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="216" y="0" width="54" height="15" uuid="96e61fe4-d9d4-410a-aa71-29d225e7af79"/>
+					<textFieldExpression><![CDATA[$F{salary_calculation_Leaves}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="270" y="0" width="54" height="15" uuid="8ebd0541-4df7-4ba9-8b5f-9e84744995be"/>
+					<textFieldExpression><![CDATA[$F{salary_calculation_BasicSalary}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="324" y="0" width="54" height="15" uuid="7747cd16-effc-4f97-a84f-3623363f58b4"/>
+					<textFieldExpression><![CDATA[$F{salary_calculation_WorkedHours}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="378" y="0" width="54" height="15" uuid="b05ce23f-d1d2-44bd-9d15-c79d83c0eaea"/>
+					<textFieldExpression><![CDATA[$F{salary_calculation_EPF}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="432" y="0" width="54" height="15" uuid="7a31d0df-b026-4523-995b-de2d52d5db9e"/>
+					<textFieldExpression><![CDATA[$F{salary_calculation_EPF12}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="486" y="0" width="54" height="15" uuid="f81e2a3a-12b3-4dad-b094-88c2773d23db"/>
+					<textFieldExpression><![CDATA[$F{salary_calculation_ETF}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="561" y="0" width="54" height="15" uuid="89375747-cef9-4fce-9685-91a3e08b6c93"/>
+					<textFieldExpression><![CDATA[$F{salary_calculation_Bonus_Type}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="617" y="0" width="54" height="15" uuid="f11945e8-8668-4c76-838c-d3fa8e243fe9"/>
+					<textFieldExpression><![CDATA[$F{salary_calculation_Bonus}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="703" y="0" width="96" height="15" uuid="faf6ac32-56c5-400b-b9e0-b946d62f8a18"/>
+					<textFieldExpression><![CDATA[$F{salary_calculation_TotalSalary}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="97" y="16" width="705" height="1" uuid="cb51844c-3601-4c72-baea-8d0f1f69100e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="c2ee882a-3e38-4ab5-a760-b949dd83097e"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

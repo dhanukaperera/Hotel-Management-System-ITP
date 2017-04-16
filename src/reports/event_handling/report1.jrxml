@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ff506522-06c5-4be3-921d-0f7b0f826bf0">
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     event_bills.`Invoice No` AS event_bills_Invoice_No,
+     event_bills.`Date Modified` AS event_bills_Date_Modified,
+     event_bills.`Booking No` AS event_bills_Booking_No,
+     event_bills.`Customer No` AS event_bills_Customer_No,
+     event_bills.`Meal Charges` AS event_bills_Meal_Charges,
+     event_bills.`Service Charges` AS event_bills_Service_Charges,
+     event_bills.`Extra Charges` AS event_bills_Extra_Charges,
+     event_bills.`Extra Charges Types` AS event_bills_Extra_Charges_Types,
+     event_bills.`Total Charges` AS event_bills_Total_Charges,
+     event_bills.`Discount` AS event_bills_Discount,
+     event_bills.`Advanced` AS event_bills_Advanced,
+     event_bills.`Total Payable` AS event_bills_Total_Payable,
+     event_bills.`Amount Paid` AS event_bills_Amount_Paid,
+     event_bills.`Balance` AS event_bills_Balance
+FROM
+     `event_bills` event_bills]]>
+	</queryString>
+	<field name="event_bills_Invoice_No" class="java.lang.String"/>
+	<field name="event_bills_Date_Modified" class="java.lang.String"/>
+	<field name="event_bills_Booking_No" class="java.lang.String"/>
+	<field name="event_bills_Customer_No" class="java.lang.String"/>
+	<field name="event_bills_Meal_Charges" class="java.lang.String"/>
+	<field name="event_bills_Service_Charges" class="java.lang.Float"/>
+	<field name="event_bills_Extra_Charges" class="java.lang.Float"/>
+	<field name="event_bills_Extra_Charges_Types" class="java.lang.String"/>
+	<field name="event_bills_Total_Charges" class="java.lang.Float"/>
+	<field name="event_bills_Discount" class="java.lang.Float"/>
+	<field name="event_bills_Advanced" class="java.lang.Float"/>
+	<field name="event_bills_Total_Payable" class="java.lang.Float"/>
+	<field name="event_bills_Amount_Paid" class="java.lang.Float"/>
+	<field name="event_bills_Balance" class="java.lang.Float"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="164" height="126" uuid="d2fcabc2-8d69-4de5-821b-d3d60d79a692"/>
+				<imageExpression><![CDATA["coffee.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="170" y="0" width="263" height="62" uuid="780a383d-e571-48b6-ba03-6753baf1a2c9"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Coffee Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="219" y="62" width="196" height="22" uuid="b9d307e8-9fb8-4fc7-a495-769ecd1e00ae"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Coffee SubTitle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="94" width="383" height="42" uuid="1419bb7e-1085-4a9f-8eda-55dcaeda8315"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor purus gravida arcu aliquam mattis. Donec et nulla libero, ut varius massa. Nulla sed turpis elit. Etiam aliquet mauris a ligula hendrerit in auctor leo lobortis.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="433" y="-115" width="267" height="209" uuid="b92a94bf-d40d-4f3c-8781-e261afbdbb98"/>
+				<imageExpression><![CDATA["coffee_stain.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="9575e351-0b9a-433c-8160-9f9f4a1595f1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="39" height="15" forecolor="#736343" uuid="a5fda48c-9ad2-4482-97f9-05563817e0e0"/>
+				<text><![CDATA[event_bills_Invoice_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="39" y="0" width="39" height="15" forecolor="#736343" uuid="6a21e0f0-921f-4ae7-8d4c-460eb6c3d371"/>
+				<text><![CDATA[event_bills_Date_Modified]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="78" y="0" width="39" height="15" forecolor="#736343" uuid="0d6e4062-5065-4041-91dd-42eeeaa51d0e"/>
+				<text><![CDATA[event_bills_Booking_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="117" y="0" width="39" height="15" forecolor="#736343" uuid="87f948b2-3598-4e80-b9d9-34dcc77959cf"/>
+				<text><![CDATA[event_bills_Customer_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="156" y="0" width="39" height="15" forecolor="#736343" uuid="d6ef2a22-5086-4fd6-a1e3-09dc473db0d2"/>
+				<text><![CDATA[event_bills_Meal_Charges]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="195" y="0" width="39" height="15" forecolor="#736343" uuid="93df15c9-f9b2-4e5b-aa49-c74133564cfc"/>
+				<text><![CDATA[event_bills_Service_Charges]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="234" y="0" width="39" height="15" forecolor="#736343" uuid="451c059b-3d03-469e-b772-691f7363a600"/>
+				<text><![CDATA[event_bills_Extra_Charges]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="273" y="0" width="39" height="15" forecolor="#736343" uuid="4c014306-c780-431c-b031-e2af6dac2cd2"/>
+				<text><![CDATA[event_bills_Extra_Charges_Types]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="312" y="0" width="39" height="15" forecolor="#736343" uuid="351e76b2-7242-46ea-82dd-8fe0ef2693b8"/>
+				<text><![CDATA[event_bills_Total_Charges]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="351" y="0" width="39" height="15" forecolor="#736343" uuid="f6ee5124-b272-482e-ad46-4c93c7858eee"/>
+				<text><![CDATA[event_bills_Discount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="390" y="0" width="39" height="15" forecolor="#736343" uuid="f756dc72-08c6-4635-9558-6b6c12245250"/>
+				<text><![CDATA[event_bills_Advanced]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="429" y="0" width="39" height="15" forecolor="#736343" uuid="3d28457e-06f5-426d-82e3-b75dc41ae0b8"/>
+				<text><![CDATA[event_bills_Total_Payable]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="468" y="0" width="39" height="15" forecolor="#736343" uuid="ea9fb1ee-c33d-4fea-8172-40b53169cee0"/>
+				<text><![CDATA[event_bills_Amount_Paid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="507" y="0" width="39" height="15" forecolor="#736343" uuid="6c31beed-3814-4520-9b6b-5da52042eace"/>
+				<text><![CDATA[event_bills_Balance]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="15" uuid="617d8917-7ab3-4bf5-b92b-5dc467989720"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="39" height="15" uuid="d4ac6917-ae8b-489c-a52f-19cb12afe897"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Invoice_No}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="39" y="0" width="39" height="15" uuid="cb6e03d8-b9b1-4a56-bc89-14edfaf663ce"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Date_Modified}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="78" y="0" width="39" height="15" uuid="d5e3b75f-440f-4f05-abcd-db029b5e5e07"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Booking_No}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="117" y="0" width="39" height="15" uuid="351f5d17-a2af-41b7-80e2-aeacbaf45c9e"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Customer_No}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="156" y="0" width="39" height="15" uuid="1ce020fa-a569-4234-ab53-493852240eac"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Meal_Charges}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="195" y="0" width="39" height="15" uuid="0a2f6229-fdaa-4831-a7fe-5b318b656db8"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Service_Charges}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="234" y="0" width="39" height="15" uuid="33107ed2-8d37-4f94-b616-27f77c73ad3e"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Extra_Charges}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="273" y="0" width="39" height="15" uuid="0ec44886-a293-43eb-8819-f606efec1507"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Extra_Charges_Types}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="312" y="0" width="39" height="15" uuid="96d53a84-f7c9-4984-988e-bbd276ad8063"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Total_Charges}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="351" y="0" width="39" height="15" uuid="db56ebf0-25b8-462a-ac8c-55259f001edd"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Discount}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="390" y="0" width="39" height="15" uuid="d0e4c1d0-6e2f-4dc9-acba-6b8f95612f6d"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Advanced}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="429" y="0" width="39" height="15" uuid="443383ec-dbe6-44c8-a191-1ca234ac7909"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Total_Payable}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="468" y="0" width="39" height="15" uuid="aa1b7291-789c-4382-a2fe-ab80bc8a632a"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Amount_Paid}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="507" y="0" width="39" height="15" uuid="395d3cd0-6979-4e97-b10f-7c95a64f1311"/>
+					<textFieldExpression><![CDATA[$F{event_bills_Balance}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="36f9aec6-5943-4b73-802e-c027f1370a02"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="597" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="bf6bccc0-c0ce-43c9-8e85-384f78ffc046"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="533" y="0" width="40" height="20" forecolor="#736343" uuid="5b885e3d-89e1-4666-aa4b-fa61aea8c25e"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="453" y="0" width="80" height="20" forecolor="#736343" uuid="1d041be0-5d6b-45a7-85af-3aa548f4f320"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="b84b1b51-f301-4883-8716-958e31080465"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
